@@ -6,10 +6,16 @@ Gemini 2.5 Flash + Google Search Grounding を使った MCP サーバー。
 
 ## インストール
 
-### npx（推奨）
+### ユーザーレベル（全プロジェクトで使用可能）
 
 ```bash
-claude mcp add gemini-search -e GEMINI_API_KEY=your_api_key -- npx -y @kidapu/gemini-search-mcp
+claude mcp add gemini-search -s user -e GEMINI_API_KEY=your_api_key -- npx -y @kidapu/gemini-search-mcp
+```
+
+### プロジェクトレベル（このプロジェクトのみ）
+
+```bash
+claude mcp add gemini-search -s project -e GEMINI_API_KEY=your_api_key -- npx -y @kidapu/gemini-search-mcp
 ```
 
 ### ローカルインストール
@@ -26,7 +32,7 @@ cp .env.example .env
 Claude Code に登録:
 
 ```bash
-claude mcp add gemini-search -- node /path/to/Gemini-Search-MCP/build/index.js
+claude mcp add gemini-search -s user -- node /path/to/Gemini-Search-MCP/build/index.js
 ```
 
 ---
