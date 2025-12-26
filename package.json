@@ -1,5 +1,5 @@
 {
-  "name": "gemini-search-mcp",
+  "name": "@kidapu/gemini-search-mcp",
   "version": "0.0.1",
   "description": "MCP server for AI agents to use Gemini 2.5 Flash with Google Search grounding",
   "main": "build/index.js",
@@ -7,6 +7,15 @@
   "bin": {
     "gemini-search-mcp": "build/index.js"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kidapu/Gemini-Search-MCP.git"
+  },
+  "homepage": "https://github.com/kidapu/Gemini-Search-MCP",
+  "author": "kidapu",
   "scripts": {
     "build": "tsc && chmod +x build/index.js",
     "prepublishOnly": "npm run build"
