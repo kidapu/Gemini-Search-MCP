@@ -4,6 +4,8 @@
 
 Gemini 2.5 Flash + Google Search Grounding を使った MCP サーバー。
 
+**npm**: https://www.npmjs.com/package/@kidapu/gemini-search-mcp
+
 ## インストール
 
 ### ユーザーレベル（全プロジェクトで使用可能）
