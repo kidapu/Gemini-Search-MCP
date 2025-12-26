@@ -1,0 +1,37 @@
+{
+  "name": "gemini-search-mcp",
+  "version": "0.0.1",
+  "description": "MCP server for AI agents to use Gemini 2.5 Flash with Google Search grounding",
+  "main": "build/index.js",
+  "type": "module",
+  "bin": {
+    "gemini-search-mcp": "build/index.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod +x build/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@google/genai": "^1.33.0",
+    "@modelcontextprotocol/sdk": "^1.13.2",
+    "dotenv": "^16.6.1",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.8.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "pnpm@10.10.0",
+  "keywords": [
+    "mcp",
+    "gemini",
+    "google",
+    "search",
+    "ai",
+    "claude"
+  ],
+  "license": "MIT"
+}
