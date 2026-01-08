@@ -30,7 +30,15 @@ claude mcp add gemini-search -s project -e GEMINI_API_KEY=your_api_key -- npx -y
 /plugin install gemini-search@gemini-search-mcp
 ```
 
-> **注意**: プラグイン方式では事前に環境変数 `GEMINI_API_KEY` を設定しておく必要があります。
+> **注意**: プラグイン方式では事前に環境変数の設定が必要です。
+>
+> ```bash
+> # ~/.zshrc に追記
+> export GEMINI_API_KEY="your_api_key"
+>
+> # 反映
+> source ~/.zshrc
+> ```
 
 ## 環境変数
 
