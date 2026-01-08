@@ -1,0 +1,32 @@
+{
+  "name": "gemini-search-mcp",
+  "owner": {
+    "name": "kidapu",
+    "email": "kidapu@users.noreply.github.com"
+  },
+  "metadata": {
+    "description": "Gemini 2.5 Flash + Google Search Grounding MCP server for Claude Code",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "gemini-search",
+      "source": ".",
+      "description": "AI agent powered by Gemini 2.5 Flash with Google Search grounding. Useful for finding the latest information, troubleshooting errors, researching topics, and discussing ideas.",
+      "version": "0.0.1",
+      "author": "kidapu",
+      "category": "AI Tools",
+      "tags": ["gemini", "google", "search", "ai", "mcp"],
+      "strict": false,
+      "mcpServers": {
+        "gemini-search": {
+          "command": "npx",
+          "args": ["-y", "@kidapu/gemini-search-mcp"],
+          "env": {
+            "GEMINI_API_KEY": "${GEMINI_API_KEY}"
+          }
+        }
+      }
+    }
+  ]
+}
