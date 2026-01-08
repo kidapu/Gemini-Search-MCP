@@ -45,7 +45,7 @@ function parseBool(value: string | undefined, defaultValue: boolean): boolean {
 
 // Configuration from environment variables
 const config = {
-  apiKey: process.env.GEMINI_API_KEY,
+  apiKey: process.env.GEMINI_SEARCH_MCP_API_KEY,
   model: resolveModel(process.env.GEMINI_MODEL || "flash"),
   timeout: parseInt(process.env.GEMINI_API_TIMEOUT || "120000"),
   // Thinking mode: -1 = auto (default), 0 = off, 1-24576 = token budget
@@ -55,7 +55,7 @@ const config = {
 };
 
 if (!config.apiKey) {
-  console.error("Error: GEMINI_API_KEY is required");
+  console.error("Error: GEMINI_SEARCH_MCP_API_KEY is required");
   process.exit(1);
 }
 

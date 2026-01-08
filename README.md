@@ -14,10 +14,10 @@ API キーは [Google AI Studio](https://aistudio.google.com/apikey) で取得�
 
 ```bash
 # ユーザーレベル（全プロジェクトで使用可能）
-claude mcp add gemini-search -s user -e GEMINI_API_KEY=your_api_key -- npx -y @kidapu/gemini-search-mcp
+claude mcp add gemini-search -s user -e GEMINI_SEARCH_MCP_API_KEY=your_api_key -- npx -y @kidapu/gemini-search-mcp
 
 # プロジェクトレベル（このプロジェクトのみ）
-claude mcp add gemini-search -s project -e GEMINI_API_KEY=your_api_key -- npx -y @kidapu/gemini-search-mcp
+claude mcp add gemini-search -s project -e GEMINI_SEARCH_MCP_API_KEY=your_api_key -- npx -y @kidapu/gemini-search-mcp
 ```
 
 ### プラグインとしてインストール
@@ -34,7 +34,7 @@ claude mcp add gemini-search -s project -e GEMINI_API_KEY=your_api_key -- npx -y
 >
 > ```bash
 > # ~/.zshrc に追記
-> export GEMINI_API_KEY="your_api_key"
+> export GEMINI_SEARCH_MCP_API_KEY="your_api_key"
 >
 > # 反映
 > source ~/.zshrc
@@ -44,7 +44,7 @@ claude mcp add gemini-search -s project -e GEMINI_API_KEY=your_api_key -- npx -y
 
 | 変数名 | デフォルト | 説明 |
 |--------|-----------|------|
-| `GEMINI_API_KEY` | - | Google AI API キー（必須） |
+| `GEMINI_SEARCH_MCP_API_KEY` | - | Google AI API キー（必須） |
 | `GEMINI_MODEL` | `flash` | モデル: `flash`, `flash-lite`, `pro` |
 | `GEMINI_THINKING_BUDGET` | `-1` | Thinking: -1=auto, 0=off, 1-24576 |
 | `GEMINI_WEB_SEARCH` | `true` | Web検索: true/false |

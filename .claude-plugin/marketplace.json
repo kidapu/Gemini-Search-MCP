@@ -23,7 +23,7 @@
           "command": "npx",
           "args": ["-y", "@kidapu/gemini-search-mcp"],
           "env": {
-            "GEMINI_API_KEY": "${GEMINI_API_KEY}"
+            "GEMINI_SEARCH_MCP_API_KEY": "${GEMINI_SEARCH_MCP_API_KEY}"
           }
         }
       }
