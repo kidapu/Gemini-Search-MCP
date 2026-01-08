@@ -8,17 +8,9 @@ Gemini 2.5 Flash + Google Search Grounding を使った MCP サーバー。
 
 ## インストール
 
-### プラグインとしてインストール（推奨）
+API キーは [Google AI Studio](https://aistudio.google.com/apikey) で取得できます。
 
-```bash
-# 1. マーケットプレイスを追加
-/plugin marketplace add kidapu/Gemini-Search-MCP
-
-# 2. プラグインをインストール
-/plugin install gemini-search@gemini-search-mcp
-```
-
-### MCP サーバーとして直接追加
+### MCP サーバーとして追加（推奨）
 
 ```bash
 # ユーザーレベル（全プロジェクトで使用可能）
@@ -28,9 +20,17 @@ claude mcp add gemini-search -s user -e GEMINI_API_KEY=your_api_key -- npx -y @k
 claude mcp add gemini-search -s project -e GEMINI_API_KEY=your_api_key -- npx -y @kidapu/gemini-search-mcp
 ```
 
----
+### プラグインとしてインストール
 
-API キーは [Google AI Studio](https://aistudio.google.com/apikey) で取得できます。
+```bash
+# 1. マーケットプレイスを追加
+/plugin marketplace add kidapu/Gemini-Search-MCP
+
+# 2. プラグインをインストール
+/plugin install gemini-search@gemini-search-mcp
+```
+
+> **注意**: プラグイン方式では事前に環境変数 `GEMINI_API_KEY` を設定しておく必要があります。
 
 ## 環境変数
 
