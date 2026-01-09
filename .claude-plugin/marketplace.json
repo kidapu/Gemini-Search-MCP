@@ -11,10 +11,16 @@
   "plugins": [
     {
       "name": "gemini-search",
-      "source": ".",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/kidapu/Gemini-Search-MCP.git"
+      },
       "description": "AI agent powered by Gemini 2.5 Flash with Google Search grounding. Useful for finding the latest information, troubleshooting errors, researching topics, and discussing ideas.",
       "version": "0.0.1",
-      "author": "kidapu",
+      "author": {
+        "name": "kidapu",
+        "email": "kidapu@users.noreply.github.com"
+      },
       "category": "AI Tools",
       "tags": ["gemini", "google", "search", "ai", "mcp"],
       "strict": false,
