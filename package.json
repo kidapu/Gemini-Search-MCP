@@ -1,6 +1,6 @@
 {
   "name": "@kidapu/gemini-search-mcp",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "MCP server for AI agents to use Gemini 2.5 Flash with Google Search grounding",
   "main": "build/index.js",
   "type": "module",
