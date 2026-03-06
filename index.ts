@@ -22,11 +22,16 @@ const server = new McpServer({
 
 // Model presets for easy switching
 const MODEL_PRESETS: Record<string, string> = {
-  // Aliases for convenience
-  "flash": "gemini-2.5-flash",
-  "flash-lite": "gemini-2.5-flash-lite",
+  // Aliases for convenience (default = Gemini 3.1 Flash-Lite)
+  "flash": "gemini-3.1-flash-lite-preview",
+  "flash-lite": "gemini-3.1-flash-lite-preview",
   "pro": "gemini-2.5-pro",
-  // Full model names also work
+  // Gemini 3.x models
+  "gemini-3-flash-preview": "gemini-3-flash-preview",
+  "gemini-3.1-flash-lite-preview": "gemini-3.1-flash-lite-preview",
+  // Gemini 2.5 models (legacy)
+  "2.5-flash": "gemini-2.5-flash",
+  "2.5-flash-lite": "gemini-2.5-flash-lite",
   "gemini-2.5-flash": "gemini-2.5-flash",
   "gemini-2.5-flash-lite": "gemini-2.5-flash-lite",
   "gemini-2.5-pro": "gemini-2.5-pro",
@@ -79,7 +84,7 @@ function formatGroundingMetadata(metadata: any): string {
 // Define the gemini-search tool
 server.tool(
   "gemini-search",
-  `An AI agent powered by Gemini 2.5 Flash with Google Search grounding.
+  `An AI agent powered by Gemini 3.1 Flash-Lite with Google Search grounding.
 Useful for finding the latest information, troubleshooting errors, researching topics,
 and discussing ideas. Returns responses with cited sources from the web.`,
   {
